@@ -657,10 +657,10 @@ function Closing() {
           <p className="mt-3 text-lg text-white/85">Restoring dignity. Building futures.</p>
         </Reveal>
         <Reveal delay={300}>
-          <div className="mt-12 flex flex-wrap justify-center gap-3">
-            <a href="#contact" className="rounded-full bg-[var(--gold)] px-7 py-3.5 text-sm font-medium text-[var(--navy-deep)] transition hover:bg-[var(--gold-soft)]">Partner With Us</a>
-            <a href="#contact" className="rounded-full glass px-7 py-3.5 text-sm font-medium text-white transition hover:bg-white/15">Download Project Profile</a>
-            <a href="#contact" className="rounded-full border border-white/30 px-7 py-3.5 text-sm font-medium text-white transition hover:bg-white/10">Contact Us</a>
+          <div className="mt-12 flex flex-wrap justify-center gap-3 text-white/10">
+            {"\n"}
+            {"\n"}
+            {"\n"}
           </div>
         </Reveal>
       </div>
