@@ -221,10 +221,12 @@ function Story() {
       <div className="mx-auto grid max-w-7xl gap-12 px-6 md:grid-cols-2 md:gap-20">
         <Reveal>
           <div className="grid grid-cols-2 gap-3">
-            <div className="overflow-hidden rounded-2xl">
+            <div className="relative overflow-hidden rounded-2xl">
+              <Tag n={5} />
               <img src={kilnImg} alt="Brick kiln at dawn" loading="lazy" className="h-[28rem] w-full object-cover grayscale" />
             </div>
-            <div className="overflow-hidden rounded-2xl">
+            <div className="relative overflow-hidden rounded-2xl">
+              <Tag n={6} />
               <img src={classroomImg} alt="Akshar Learning Centre" loading="lazy" className="h-[28rem] w-full object-cover" />
             </div>
           </div>
