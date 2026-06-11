@@ -571,6 +571,7 @@ function Voices() {
                 className="absolute inset-0 h-full w-full object-cover transition-opacity duration-1000"
                 style={{ opacity: k === i ? 1 : 0 }} />
             ))}
+            <Tag n={14 + i} />
           </div>
           <div>
             <Quote className="h-10 w-10 text-[var(--gold)]" />
