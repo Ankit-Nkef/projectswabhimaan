@@ -507,7 +507,8 @@ function Interns() {
     <section className="relative bg-[var(--navy-deep)] py-28 text-white md:py-40">
       <div className="mx-auto grid max-w-7xl gap-16 px-6 md:grid-cols-2 md:items-center">
         <Reveal>
-          <div className="overflow-hidden rounded-3xl">
+          <div className="relative overflow-hidden rounded-3xl">
+            <Tag n={13} />
             <img src={internImg} alt="CM Pratigya Intern" loading="lazy" className="h-[34rem] w-full object-cover" />
           </div>
         </Reveal>
