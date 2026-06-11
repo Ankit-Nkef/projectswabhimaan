@@ -626,6 +626,7 @@ function Journey() {
             <Reveal key={i} delay={i * 60} className={`${g.span} group relative overflow-hidden rounded-2xl`}>
               <div className="relative h-full w-full">
                 <img src={g.img} alt={g.tag} loading="lazy" className="h-full w-full object-cover transition duration-700 group-hover:scale-105" />
+                <Tag n={17 + i} />
                 <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[var(--navy-deep)]/80 to-transparent p-4">
                   <div className="text-[10px] uppercase tracking-[0.22em] text-white/85">{g.tag}</div>
                 </div>
