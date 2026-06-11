@@ -266,6 +266,7 @@ function Akshar() {
     <section id="learning" className="relative bg-[var(--navy-deep)] text-white">
       <div className="relative h-[70svh] min-h-[420px] w-full overflow-hidden">
         <img src={classroomImg} alt="Akshar Learning Centre" loading="lazy" className="h-full w-full object-cover" />
+        <Tag n={7} />
         <div className="absolute inset-0 bg-gradient-to-t from-[var(--navy-deep)] via-[var(--navy-deep)]/30 to-transparent" />
         <div className="absolute bottom-0 left-0 right-0 mx-auto max-w-7xl px-6 pb-16">
           <Reveal>
