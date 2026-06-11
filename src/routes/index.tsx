@@ -678,6 +678,7 @@ function Closing() {
   return (
     <section className="relative h-[100svh] min-h-[640px] overflow-hidden">
       <img src={childrenGroupImg} alt="" className="absolute inset-0 h-full w-full object-cover animate-kenburns" loading="lazy" />
+      <Tag n={25} />
       <div className="absolute inset-0 bg-gradient-to-b from-[var(--navy-deep)]/40 via-[var(--navy-deep)]/55 to-[var(--navy-deep)]/90" />
       <div className="relative z-10 mx-auto flex h-full max-w-5xl flex-col items-center justify-center px-6 text-center text-white">
         <Reveal>
