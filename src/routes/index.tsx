@@ -367,6 +367,7 @@ function Health() {
     <section className="relative bg-white">
       <div className="relative h-[60svh] min-h-[380px] w-full overflow-hidden">
         <img src={healthImg} alt="Health camp at brick kiln" loading="lazy" className="h-full w-full object-cover" />
+        <Tag n={8} />
         <div className="absolute inset-0 bg-gradient-to-r from-[var(--navy-deep)]/80 via-[var(--navy-deep)]/40 to-transparent" />
         <div className="absolute inset-0 mx-auto flex max-w-7xl items-center px-6">
           <Reveal>
