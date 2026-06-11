@@ -16,6 +16,16 @@ import internImg from "@/assets/intern.jpg";
 import motherImg from "@/assets/mother.jpg";
 import childrenGroupImg from "@/assets/children-group.jpg";
 import communityImg from "@/assets/community.jpg";
+import biharLogo from "@/assets/bihar-govt-logo.png.asset.json";
+import neevLogo from "@/assets/neev-ki-eent-logo.png.asset.json";
+
+function Tag({ n }: { n: number }) {
+  return (
+    <span className="absolute left-3 top-3 z-30 rounded-md bg-black/70 px-2 py-1 text-[10px] font-mono font-bold uppercase tracking-wider text-white shadow-lg ring-1 ring-white/20">
+      IMG #{n}
+    </span>
+  );
+}
 
 export const Route = createFileRoute("/")({
   head: () => ({
