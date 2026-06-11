@@ -409,6 +409,7 @@ function Resilience() {
   return (
     <section className="relative overflow-hidden bg-[#1a0f08] text-white">
       <img src={coolingImg} alt="" loading="lazy" className="absolute inset-0 h-full w-full object-cover opacity-40" />
+      <Tag n={9} />
       <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse at 30% 20%, rgba(245,124,0,0.35), transparent 60%), linear-gradient(180deg, rgba(20,12,6,0.85), rgba(20,12,6,0.95))" }} />
       <div className="relative mx-auto max-w-7xl px-6 py-28 md:py-40">
         <Reveal>
