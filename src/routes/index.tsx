@@ -608,7 +608,7 @@ function Journey() {
 
 const roadmap = [
   { y: "2026", t: "Expand Services", d: "Deepen convergence across more kilns and migrant routes." },
-  { y: "2027", t: "Digital Learning", d: "Hybrid Akshar Centres with digital classrooms and content." },
+  { y: "2027", t: "Model ALC", d: "Model Akshar Learning Center at all 55 kilns with digital classrooms and content." },
   { y: "2028+", t: "Scale Across Bihar", d: "Replicate the Sheikhpura model in priority districts." },
 ];
 
