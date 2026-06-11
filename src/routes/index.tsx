@@ -109,13 +109,16 @@ function Hero() {
           style={{ opacity: i === idx ? 1 : 0 }}
         >
           <img src={src} alt="" className="absolute inset-0 h-full w-full object-cover animate-kenburns" />
+          <Tag n={i + 1} />
         </div>
       ))}
       <div className="absolute inset-0 bg-gradient-to-b from-[var(--navy-deep)]/70 via-[var(--navy-deep)]/40 to-[var(--navy-deep)]/85" />
       <div className="absolute inset-x-0 top-0 z-20">
         <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 text-white/90">
           <div className="flex items-center gap-3">
-            <div className="grid h-10 w-10 place-items-center rounded-md bg-[var(--gold)] text-[var(--navy-deep)] font-display text-lg font-bold">स</div>
+            <div className="grid h-12 w-12 place-items-center rounded-full bg-white p-1.5 shadow-md">
+              <img src={biharLogo.url} alt="Government of Bihar" className="h-full w-full object-contain" />
+            </div>
             <div className="leading-tight">
               <div className="font-display text-base tracking-wide">Project Swabhimaan</div>
               <div className="text-[10px] uppercase tracking-[0.18em] text-white/60">Sheikhpura · Bihar</div>
@@ -125,6 +128,15 @@ function Hero() {
             {["Impact", "Story", "Learning", "Convergence", "Resilience", "Contact"].map((l) => (
               <a key={l} href={`#${l.toLowerCase()}`} className="opacity-80 transition hover:opacity-100">{l}</a>
             ))}
+          </div>
+          <div className="flex items-center gap-3">
+            <div className="leading-tight text-right hidden sm:block">
+              <div className="font-display text-xs tracking-wide">Neev Ki Eent</div>
+              <div className="text-[10px] uppercase tracking-[0.18em] text-white/60">Foundation</div>
+            </div>
+            <div className="grid h-12 w-12 place-items-center rounded-full bg-white p-1 shadow-md">
+              <img src={neevLogo.url} alt="Neev Ki Eent Foundation" className="h-full w-full object-contain" />
+            </div>
           </div>
         </nav>
       </div>
