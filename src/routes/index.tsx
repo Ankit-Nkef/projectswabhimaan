@@ -471,13 +471,16 @@ function Neev() {
         </Reveal>
         <Reveal delay={150} className="md:col-span-7">
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
-            <div className="col-span-2 row-span-2 overflow-hidden rounded-2xl sm:col-span-2">
+            <div className="relative col-span-2 row-span-2 overflow-hidden rounded-2xl sm:col-span-2">
+              <Tag n={10} />
               <img src={communityImg} alt="Community mobilisation" loading="lazy" className="h-full w-full object-cover" />
             </div>
-            <div className="overflow-hidden rounded-2xl">
+            <div className="relative overflow-hidden rounded-2xl">
+              <Tag n={11} />
               <img src={motherImg} alt="" loading="lazy" className="h-full w-full object-cover" />
             </div>
-            <div className="overflow-hidden rounded-2xl">
+            <div className="relative overflow-hidden rounded-2xl">
+              <Tag n={12} />
               <img src={childReadingImg} alt="" loading="lazy" className="h-full w-full object-cover" />
             </div>
           </div>
