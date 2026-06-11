@@ -16,6 +16,16 @@ import internImg from "@/assets/intern.jpg";
 import motherImg from "@/assets/mother.jpg";
 import childrenGroupImg from "@/assets/children-group.jpg";
 import communityImg from "@/assets/community.jpg";
+import biharLogo from "@/assets/bihar-govt-logo.png.asset.json";
+import neevLogo from "@/assets/neev-ki-eent-logo.png.asset.json";
+
+function Tag({ n }: { n: number }) {
+  return (
+    <span className="absolute left-3 top-3 z-30 rounded-md bg-black/70 px-2 py-1 text-[10px] font-mono font-bold uppercase tracking-wider text-white shadow-lg ring-1 ring-white/20">
+      IMG #{n}
+    </span>
+  );
+}
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -99,13 +109,16 @@ function Hero() {
           style={{ opacity: i === idx ? 1 : 0 }}
         >
           <img src={src} alt="" className="absolute inset-0 h-full w-full object-cover animate-kenburns" />
+          <Tag n={i + 1} />
         </div>
       ))}
       <div className="absolute inset-0 bg-gradient-to-b from-[var(--navy-deep)]/70 via-[var(--navy-deep)]/40 to-[var(--navy-deep)]/85" />
       <div className="absolute inset-x-0 top-0 z-20">
         <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 text-white/90">
           <div className="flex items-center gap-3">
-            <div className="grid h-10 w-10 place-items-center rounded-md bg-[var(--gold)] text-[var(--navy-deep)] font-display text-lg font-bold">स</div>
+            <div className="grid h-12 w-12 place-items-center rounded-full bg-white p-1.5 shadow-md">
+              <img src={biharLogo.url} alt="Government of Bihar" className="h-full w-full object-contain" />
+            </div>
             <div className="leading-tight">
               <div className="font-display text-base tracking-wide">Project Swabhimaan</div>
               <div className="text-[10px] uppercase tracking-[0.18em] text-white/60">Sheikhpura · Bihar</div>
@@ -115,6 +128,15 @@ function Hero() {
             {["Impact", "Story", "Learning", "Convergence", "Resilience", "Contact"].map((l) => (
               <a key={l} href={`#${l.toLowerCase()}`} className="opacity-80 transition hover:opacity-100">{l}</a>
             ))}
+          </div>
+          <div className="flex items-center gap-3">
+            <div className="leading-tight text-right hidden sm:block">
+              <div className="font-display text-xs tracking-wide">Neev Ki Eent</div>
+              <div className="text-[10px] uppercase tracking-[0.18em] text-white/60">Foundation</div>
+            </div>
+            <div className="grid h-12 w-12 place-items-center rounded-full bg-white p-1 shadow-md">
+              <img src={neevLogo.url} alt="Neev Ki Eent Foundation" className="h-full w-full object-contain" />
+            </div>
           </div>
         </nav>
       </div>
@@ -199,10 +221,12 @@ function Story() {
       <div className="mx-auto grid max-w-7xl gap-12 px-6 md:grid-cols-2 md:gap-20">
         <Reveal>
           <div className="grid grid-cols-2 gap-3">
-            <div className="overflow-hidden rounded-2xl">
+            <div className="relative overflow-hidden rounded-2xl">
+              <Tag n={5} />
               <img src={kilnImg} alt="Brick kiln at dawn" loading="lazy" className="h-[28rem] w-full object-cover grayscale" />
             </div>
-            <div className="overflow-hidden rounded-2xl">
+            <div className="relative overflow-hidden rounded-2xl">
+              <Tag n={6} />
               <img src={classroomImg} alt="Akshar Learning Centre" loading="lazy" className="h-[28rem] w-full object-cover" />
             </div>
           </div>
@@ -242,6 +266,7 @@ function Akshar() {
     <section id="learning" className="relative bg-[var(--navy-deep)] text-white">
       <div className="relative h-[70svh] min-h-[420px] w-full overflow-hidden">
         <img src={classroomImg} alt="Akshar Learning Centre" loading="lazy" className="h-full w-full object-cover" />
+        <Tag n={7} />
         <div className="absolute inset-0 bg-gradient-to-t from-[var(--navy-deep)] via-[var(--navy-deep)]/30 to-transparent" />
         <div className="absolute bottom-0 left-0 right-0 mx-auto max-w-7xl px-6 pb-16">
           <Reveal>
@@ -342,6 +367,7 @@ function Health() {
     <section className="relative bg-white">
       <div className="relative h-[60svh] min-h-[380px] w-full overflow-hidden">
         <img src={healthImg} alt="Health camp at brick kiln" loading="lazy" className="h-full w-full object-cover" />
+        <Tag n={8} />
         <div className="absolute inset-0 bg-gradient-to-r from-[var(--navy-deep)]/80 via-[var(--navy-deep)]/40 to-transparent" />
         <div className="absolute inset-0 mx-auto flex max-w-7xl items-center px-6">
           <Reveal>
@@ -383,6 +409,7 @@ function Resilience() {
   return (
     <section className="relative overflow-hidden bg-[#1a0f08] text-white">
       <img src={coolingImg} alt="" loading="lazy" className="absolute inset-0 h-full w-full object-cover opacity-40" />
+      <Tag n={9} />
       <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse at 30% 20%, rgba(245,124,0,0.35), transparent 60%), linear-gradient(180deg, rgba(20,12,6,0.85), rgba(20,12,6,0.95))" }} />
       <div className="relative mx-auto max-w-7xl px-6 py-28 md:py-40">
         <Reveal>
@@ -444,13 +471,16 @@ function Neev() {
         </Reveal>
         <Reveal delay={150} className="md:col-span-7">
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
-            <div className="col-span-2 row-span-2 overflow-hidden rounded-2xl sm:col-span-2">
+            <div className="relative col-span-2 row-span-2 overflow-hidden rounded-2xl sm:col-span-2">
+              <Tag n={10} />
               <img src={communityImg} alt="Community mobilisation" loading="lazy" className="h-full w-full object-cover" />
             </div>
-            <div className="overflow-hidden rounded-2xl">
+            <div className="relative overflow-hidden rounded-2xl">
+              <Tag n={11} />
               <img src={motherImg} alt="" loading="lazy" className="h-full w-full object-cover" />
             </div>
-            <div className="overflow-hidden rounded-2xl">
+            <div className="relative overflow-hidden rounded-2xl">
+              <Tag n={12} />
               <img src={childReadingImg} alt="" loading="lazy" className="h-full w-full object-cover" />
             </div>
           </div>
@@ -477,7 +507,8 @@ function Interns() {
     <section className="relative bg-[var(--navy-deep)] py-28 text-white md:py-40">
       <div className="mx-auto grid max-w-7xl gap-16 px-6 md:grid-cols-2 md:items-center">
         <Reveal>
-          <div className="overflow-hidden rounded-3xl">
+          <div className="relative overflow-hidden rounded-3xl">
+            <Tag n={13} />
             <img src={internImg} alt="CM Pratigya Intern" loading="lazy" className="h-[34rem] w-full object-cover" />
           </div>
         </Reveal>
@@ -540,6 +571,7 @@ function Voices() {
                 className="absolute inset-0 h-full w-full object-cover transition-opacity duration-1000"
                 style={{ opacity: k === i ? 1 : 0 }} />
             ))}
+            <Tag n={14 + i} />
           </div>
           <div>
             <Quote className="h-10 w-10 text-[var(--gold)]" />
@@ -594,6 +626,7 @@ function Journey() {
             <Reveal key={i} delay={i * 60} className={`${g.span} group relative overflow-hidden rounded-2xl`}>
               <div className="relative h-full w-full">
                 <img src={g.img} alt={g.tag} loading="lazy" className="h-full w-full object-cover transition duration-700 group-hover:scale-105" />
+                <Tag n={17 + i} />
                 <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[var(--navy-deep)]/80 to-transparent p-4">
                   <div className="text-[10px] uppercase tracking-[0.22em] text-white/85">{g.tag}</div>
                 </div>
@@ -645,6 +678,7 @@ function Closing() {
   return (
     <section className="relative h-[100svh] min-h-[640px] overflow-hidden">
       <img src={childrenGroupImg} alt="" className="absolute inset-0 h-full w-full object-cover animate-kenburns" loading="lazy" />
+      <Tag n={25} />
       <div className="absolute inset-0 bg-gradient-to-b from-[var(--navy-deep)]/40 via-[var(--navy-deep)]/55 to-[var(--navy-deep)]/90" />
       <div className="relative z-10 mx-auto flex h-full max-w-5xl flex-col items-center justify-center px-6 text-center text-white">
         <Reveal>
